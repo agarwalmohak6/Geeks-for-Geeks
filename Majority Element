@@ -39,9 +39,8 @@ class Solution
         for(int i=0;i<size;i++) {
             if(map.containsKey(arr[i])){
                 int count=map.get(arr[i])+1;
-                if(count>size/2){
+                if(count>size/2)
                     return arr[i];
-                }
                 else
                     map.put(arr[i],count);
             }
