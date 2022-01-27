@@ -1,0 +1,28 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class GFG
+ {
+	public static void main (String[] args){
+	//code
+    	Scanner sc=new Scanner(System.in);
+    	int t;
+    	t=sc.nextInt();
+    	for(int test=0;test<t;test++){
+            int n=sc.nextInt();
+            int s1=0,s2=0;
+            int arr[]=new int[n];
+            for(int i=0;i<n;i++){
+                arr[i]=sc.nextInt();
+                if(i%2!=0)
+                    s1+=arr[i]*arr[i];
+                else
+                    s2+=arr[i]*arr[i];
+            }
+            if(n%2==0)
+                System.out.println(s1-s2);
+            else
+                System.out.println(s2-s1);
+    	}
+	}
+}
