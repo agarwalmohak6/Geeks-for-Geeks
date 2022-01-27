@@ -1,0 +1,18 @@
+import java.lang.*;
+import java.io.*;
+class GFG{
+    public static void main (String[] args){
+    	//code
+    	Scanner sc=new Scanner(System.in);
+    	int t;
+    	t=sc.nextInt();
+    	sc.nextLine();
+    	for(int test=0;test<t;test++){
+    	    String s1=sc.nextLine();
+    	    String s2=sc.nextLine();
+    	    while(s1.contains(s2+s2))
+    	        s1=s1.replaceAll(s2+s2,s2);
+    	    System.out.println(s1.replaceAll(s2,"X"));
+    	}
+	}
+}
