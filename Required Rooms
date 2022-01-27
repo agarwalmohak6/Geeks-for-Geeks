@@ -1,0 +1,41 @@
+// { Driver Code Starts
+// Initial Template for Java
+
+import java.io.*;
+import java.util.*;
+
+class GFG{
+    public static void main(String args[])throws IOException
+    {
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        int t = Integer.parseInt(in.readLine());
+        while(t-- > 0){
+            String a[] = in.readLine().trim().split("\\s+");
+            int N = Integer.parseInt(a[0]);
+            int M = Integer.parseInt(a[1]);
+            
+            Solution ob = new Solution();
+            System.out.println(ob.rooms(N, M));
+        }
+    }
+}// } Driver Code Ends
+
+
+// User function Template for Java
+
+class Solution{
+    static int rooms(int N, int M){
+        // code here
+        if(N==M)
+            return 2;
+        int c=0,max=0;
+        if(N>M)
+            max=N;
+        else
+            max=M;
+        for(int i=1;i<max;i++)
+            if(N%i==0 && M%i==0)
+                c= N/i + M/i;
+        return c;
+    }
+}
