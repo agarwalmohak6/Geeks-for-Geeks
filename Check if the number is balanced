@@ -40,8 +40,6 @@ class Sol
             if(i>mid)
                 rhs+=Integer.parseInt(""+N.charAt(i));
         }
-        System.out.print(lhs+" "+rhs);
-        System.out.println();
         if(lhs==rhs) return true;
         return false;
     }
