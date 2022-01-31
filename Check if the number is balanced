@@ -1,13 +1,11 @@
-// { Driver Code Starts
-//Initial Template for Java
+//  Driver Code Starts
 
 import java.io.*;
 import java.util.*;
 class GfG
 {
     public static void main (String[] args)
-    {
-        
+    { 
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         
@@ -22,8 +20,8 @@ class GfG
         }
         
     }
-}// } Driver Code Ends
-
+}
+// Driver Code Ends
 
 //User function Template for Java
 
