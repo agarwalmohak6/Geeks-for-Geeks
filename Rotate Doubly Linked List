@@ -4,7 +4,6 @@
 import java.util.*;
 import java.lang.*;
 import java.io.*;
-
 class Node{
 	int data;
 	Node next, prev;
@@ -14,7 +13,6 @@ class Node{
 		prev = null;
 	}
 }
-
 class MaximumFrequency{
 	public static void main(String [] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -83,6 +81,8 @@ class Solution{
             n++;
             h1=h1.next;
         }
+        if(n==k)
+            return head;
         int arr[]=new int[n];
         int idx=0;
         while(h2!=null){
