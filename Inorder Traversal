@@ -1,0 +1,39 @@
+BinaryNode root;
+    static class BinaryNode{
+        int data;
+        BinaryNode left;
+        BinaryNode right;
+        public BinaryNode(int data){
+            this.data=data;
+        }
+    }
+    void print(BinaryNode root){
+        if(root==null) return;
+        System.out.println(root.data);
+        print(root.left);
+        print(root.right);
+    }
+    BinaryNode insert(BinaryNode current, int data){
+        if(current==null)
+            return new BinaryNode(data);
+        if (data < current.data) {
+            current.left = insert(current.left, data);
+        } else if (data > current.data) {
+            current.right = insert(current.right, data);
+        } else {
+            return current;
+        }
+        return current;
+    }
+
+    public static void main(String[] args) {
+        BinaryTreeImplementation obj=new BinaryTreeImplementation();
+        BinaryNode root=new BinaryNode(15);
+        BinaryNode Rleft=new BinaryNode(16);
+        BinaryNode Rright=new BinaryNode(20);
+        root.left=Rleft;
+        root.right=Rright;
+        obj.insert(root,18);
+        obj.insert(root,60);
+        obj.print(root);
+    }
