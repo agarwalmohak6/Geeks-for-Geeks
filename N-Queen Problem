@@ -10,6 +10,7 @@ class ListComparator<T extends Comparable<T>> implements Comparator<List<T>> {
     return Integer.compare(o1.size(), o2.size());
   }
 }
+
 class Solution{
     public static void helper(ArrayList<ArrayList<Integer>> allBoards, char board[][], int col){
         if(col==board.length){
