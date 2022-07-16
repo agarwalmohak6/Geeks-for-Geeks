@@ -36,9 +36,6 @@ class PeakElement{
 	}
 }// } Driver Code Ends
 
-
-/*Complete the function below*/
-
 class Solution
 {
 	// Function to find the peak element
