@@ -1,0 +1,50 @@
+// { Driver Code Starts
+//Initial Template for Java
+
+//Initial Template for Java
+
+
+import java.io.*;
+import java.util.*;
+
+
+class Array {
+	public static void main (String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        int t = sc.nextInt();
+        while(t-- > 0)
+        {
+            int m = sc.nextInt();
+            int n = sc.nextInt();
+            int k = sc.nextInt();
+            Solution ob = new Solution();
+            
+            System.out.println(ob.KthSmallest(m,n, k));
+        }
+        
+	}
+}// } Driver Code Ends
+
+
+class Solution {
+    boolean smallest(int x, int m, int n, int k){
+        int count=0;
+        for(int i=1;i<=m;i++)
+            count+=Math.min(x/i,n);
+        return count>=k;
+    }
+    public int KthSmallest(int m, int n, int k) {
+        //Write your code here
+        int left=1,right=m*n;
+        while(left<right){
+            int mid=(left+right)/2;
+            if(smallest(mid,m,n,k))
+                right=mid;
+            else
+                left=mid+1;
+        }
+        return left;
+    }
+}
