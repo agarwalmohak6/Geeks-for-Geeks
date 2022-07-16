@@ -25,9 +25,6 @@ class Geeks
     }
 }// } Driver Code Ends
 
-
-//User function Template for Java
-
 class Solution
 {
     static int majorityElement(int arr[], int size)
